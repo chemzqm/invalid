@@ -4,8 +4,11 @@
 
 An element is considered as invalid when one of these match:
 
-* `disabled` or display is `none` or visibility is `hidden`
+* `disabled` or visibility is `hidden`
 * one of it's parentNode display is `none` or visibility is `hidden`
+
+An element is not considered invalid when it's not disabled and itself display is `none` (you may need to hide the real input and use
+other component for user input).
 
 ## Install
 

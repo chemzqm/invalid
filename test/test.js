@@ -40,19 +40,19 @@ describe('invalid component', function () {
     setTimeout(done, 200)
   })
 
-  it('should be invalid when el disabled', function () {
+  it('should be invalid when el is disabled', function () {
     el.disabled = true
     assert.equal(invalid(el), true)
+    el.disabled = false
+    assert.equal(invalid(el), false)
   })
 
-  it('should be invalid when el is hidden', function () {
+  it('should not be invalid when el itself hidden', function () {
     el.style.display = 'none'
-    assert.equal(invalid(el), true)
-    el.style.display = 'block'
     assert.equal(invalid(el), false)
-    el.style.display = ''
+    el.style.display = 'block'
     el.className = 'hide'
-    assert.equal(invalid(el), true)
+    assert.equal(invalid(el), false)
   })
 
   it('should be invalid when el parent is hidden', function () {

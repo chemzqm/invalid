@@ -5,10 +5,16 @@ var computedStyle = require('computed-style')
  *
  * @param {Element} el
  * @param {Element} [topEl] optional top element to check
+ * @return {Boolean}
  * @api public
  */
 module.exports = function (el, topEl) {
   topEl = topEl || document.body
+  if (!el.disabled && computedStyle(el, 'display') === 'none' ) {
+    el = el.parentNode
+    if (!el) return false
+  }
+
   do {
     if (el.disabled) return true
     if (hidden(el)) return true
