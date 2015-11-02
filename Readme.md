@@ -1,6 +1,7 @@
 # Invalid
 
 [![Build Status](https://secure.travis-ci.org/chemzqm/invalid.png)](http://travis-ci.org/chemzqm/invalid)
+[![Dependency Status](https://david-dm.org/chemzqm/invalid)](https://david-dm.org/chemzqm/invalid)
 
 An element is considered as invalid when one of these match:
 
